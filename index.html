@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>WELCOME</title>
+		<style>
+div {
+  width: 400px;
+  height: 400px;
+  padding: 80px;
+  margin: auto;
+            margin-top: 20px;
+            border-radius: 10px;
+            background: lightsalmon;
+        }
+	
+}
+</style>
+</head>
+<body >
+<div id="">
+<h1 style="color:black;">Login to cab booking</h1>
+<br />
+<form onsubmit="login()">
+    <label for="name">User name</label>
+	<input type="text" name="username" id="username" placeholder="Enter the user name" required><br /> <br />
+	<br/>
+    <br/>
+    <label for="number">Mobile Number</label>
+	<input type="number" name="mobilenumber" id="mobilenumber" placeholder="Enter mobile number" size="10" required><br /> <br />
+	<br/>
+	<br/>
+	<label for="password">Password</label>
+	<input type="password" name="password" id="password" placeholder="Enter password" required><br /> <br />
+	<br>
+	<br>
+	<a href="customerdetails.html" target="_blank"><button style="color:blue;">Login</button></a>
+</form>
+</div>
+<script>
+    function login()
+    {
+        event.preventDefault();
+        alert("login button clicked");
+        let username = document.querySelector("#username").value;
+        //alert("Username:" +username);
+        let mobileNum = document.querySelector("#mobilenumber").value;
+        //alert("mobileNum:" +mobileNum);
+        let password = document.querySelector("#password").value;
+        //alert("password:" +password);
+    
+        if(((username=="admin" && username.length >3 ) &&(password.length==8)) && 
+        ((mobileNum.length==10) && (mobileNum.charAt(0)>='6' && mobileNum.charAt(0)<='9'))){
+            alert("Login Success");
+        window.location.href="customerdetails.html";
+        }
+        else{
+            alert("Invalid Login Credentials");
+        }
+    }
+</script>
+</body>
+<br>
+</html>
