@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>DOB</title>
+</head>
+<body>
+<form onsubmit="dob()">
+<h1 "style=color:blue">Date of Birth</h1>
+<label>Date Of Birth</label>
+<input type="date" name="dateofbirth" id="dateofbirth" required ><br /><br />
+     <a href="anotherPage.html">
+      <button>submit</button>
+     </a>
+
+</form>
+<script>
+    function dob()
+    {
+        event.preventDefault();
+        alert("Next button clicked");
+        let dateofbirth = document.querySelector("#dateofbirth").value;
+        window.location.href="final.html"
+    }
+</script>
+</body>
+</html>
