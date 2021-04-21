@@ -3,9 +3,22 @@
 <head>
 <meta charset="ISO-8859-1">
 <title>Bill Estimator</title>
+	<style>
+div {
+  width: 600px;
+  height: 500px;
+  padding: 65px;
+  margin: auto;
+            margin-top: 0%;
+            border-radius: 20px;
+            background: lightgreen;
+}
+			
+</style>
 </head>
 <body>
 <form onsubmit="bill()">
+<div id="">
     <h1 style="color:blue;">Traveling Details</h1> 
 <label>Select Cab Type:</label>
 <select name="cabtype" id="cabtype" required>
@@ -13,11 +26,13 @@
 	<option value= "Micro">Micro</option> 
 	<option value="Mini">Mini</option>
 	<option value="Prime">Prime</option> 
-</select>
+        </select>
 	<br/><br/>
 	<label>Enter kms :</label>
 	<input type="number" name="noofkm" id="noofkm" placeholder="no of kms" required><br /> <br />
-<a href="date&time.html"><button>Submit & Next</button>
+        <a href="date&time.html"><button>Submit & Next</button>
+</div>
+</form>
     <script>
         function bill()
         {
@@ -28,7 +43,6 @@
         window.location.href="date&time.html";
         }
     </script>
-</form>
 
 </body>
 </html>
