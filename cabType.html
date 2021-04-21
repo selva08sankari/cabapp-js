@@ -3,11 +3,23 @@
 <head>
 <meta charset="ISO-8859-1">
 <title>Cab Types</title>
-
+		<style>
+div {
+  width: 300px;
+  height: 300px;
+  padding: 50px;
+  margin: auto;
+            margin-top: 10px;
+            border-radius: 20px;
+            background: lightsalmon;
+        }
+	
+</style>
 </head>
 <body>
 <h1 style="color:blue;">Cab Types</h1>
 <form onsubmit="cabtype()">
+	<div id="">
 <table border="1" >
 
 <thead>
@@ -27,7 +39,9 @@
 	<a href="billamount.html" target="_blank"><button>Next</button></a>
 
 </tbody>
-<script>
+	</div>
+</form>
+	<script>
     function cabtype()
     {
         event.preventDefault();
@@ -37,6 +51,5 @@
 
 
 </script>
-</form>
 </body>
 </html>
