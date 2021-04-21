@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>date & time</title>
+</head>
+<body>
+  <form onsubmit="dt()">
+<h1 style="color:blue;">Select Journey Date & Time</h1>
+<label>Travel Date</label>
+<input type="date" name="journeydate" id="journeydate" max="2021-04-24" min="2021-04-20" required ><br /><br />
+<label>Travel Time</label>
+<input type="time" name="journeytime" id="journeytime"required ><br /><br />
+    <a href="dateofbirth.html" target="_blank"><button>Submit & Next</button>  </a>
+  </form>
+  <script>
+      function dt()
+      {
+        event.preventDefault();
+        alert("Next button clicked");
+        let journeydate = document.querySelector("#journeydate").value;
+        let journeytime = document.querySelector("#journeytime").value;
+        window.location.href="dob.html"
+      }
+ </script>
+</body>
+</html>
