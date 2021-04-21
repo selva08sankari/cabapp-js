@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>customer details</title>
+  		<style>
+div {
+  width: 400px;
+  height: 400px;
+  padding: 80px;
+  margin: auto;
+            margin-top: 20px;
+            border-radius: 10px;
+            background: lightsalmon;
+        }
+	
+}
+</style>
+</head>
+<body>
+<form  onsubmit="details()">
+	<h1 style="color : blue;"> Customer Details</h1>
+		
+	<label for="name">Name</label>
+	<input type="text" name="fname" id="fname" placeholder="first name" required>
+	<input type="text" name="lname" id="lname" placeholder="last name" required>
+	<br /> <br />
+	<label for="email">Email id</label>
+	<input type="email" name="email" id="email" placeholder="e-mail" required>
+	<br /> <br />
+	<label for="address">Address1</label>
+	<input type="text" name="addr1" id="addr1" placeholder="Adreess line1" required>
+	<br /> <br />
+	<label for="address">Address2</label>
+	<input type="text" name="addr1" id="addr1" placeholder="Adreess line2" required>	
+	<br /> <br />
+	<label for="gender">Gender:</label>
+	<input type="radio" name="gender" id="gender" value="M" >Male
+	<input type="radio" name="gender" value="F" >Female 
+	<br></br>
+	<label for="bloodgroup">Blood Group</label>
+	<input type="text" name="bdgrp" id="bdgrp" placeholder="Blood group" required>		
+	<br></br>
+	<input type="checkbox" name="SeniorCitizen" id="SeniorCitizen" value="Y">Senior Citizen</br></br></br>
+	<label>Instructions</label>
+<nav>
+    <ol>
+    	<li> Must wear mask </li>
+    	<li> Maintain social distance</li>
+	<li> Make use of sanitizer</li>
+    </ol>
+<nav>
+<a href="cabType.html" target="_blank"> <button>Submit & Next</button></a>
+	<footer>Registered-2019-2021</footer>
+</form>
+<script>
+	  function details()
+	  {
+        event.preventDefault();
+        alert("Submit button clicked");
+        let fname = document.querySelector("#fname").value;
+        alert("fname:" +fname);
+        let lname = document.querySelector("#lname").value;
+        //alert("lname:" +lname);
+        let SeniorCitizen = document.querySelector("#SeniorCitizen").value;
+        //alert("SeniorCitizen:" +SeniorCitizen);
+		window.location.href="cabType.html";
+	  }
+</script>
+</body>
+</html>
