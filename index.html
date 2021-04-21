@@ -49,7 +49,7 @@ div {
         let password = document.querySelector("#password").value;
         //alert("password:" +password);
     
-        if(((username=="admin" && username.length >3 ) &&(password.length==8)) && 
+        if(((username.length >3 ) &&(password.length==8)) && 
         ((mobileNum.length==10) && (mobileNum.charAt(0)>='6' && mobileNum.charAt(0)<='9'))){
             alert("Login Success");
         window.location.href="customerdetails.html";
