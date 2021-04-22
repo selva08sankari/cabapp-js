@@ -9,7 +9,7 @@ div {
   height: 500px;
   padding: 65px;
   margin: auto;
-            margin-top: 0px;
+            margin-top: 0%;
             border-radius: 20px;
             background: lightsalmon;
 }
@@ -38,12 +38,9 @@ div {
 	<label for="gender">Gender:</label>
 	<input type="radio" name="gender" id="gender" value="M" >Male
 	<input type="radio" name="gender" value="F" >Female 
-	<br></br>
-	<label for="bloodgroup">Blood Group</label>
-	<input type="text" name="bdgrp" id="bdgrp" placeholder="Blood group" required>		
-	<br></br>
+	<br /><br />
 	<input type="checkbox" name="SeniorCitizen" id="SeniorCitizen" value="Y">Senior Citizen</br></br></br>
-        <a href="cabType.html" target="_blank"> <button style="color:blue;">Submit & Next</button></a> <br/>
+    <button style="color:blue;">Submit & Next</button></a> <br/>
         <br />
 <b> <label>Instructions:</label> </b>
 <nav>
@@ -61,14 +58,12 @@ div {
 	  function details()
 	  {
         event.preventDefault();
-        alert("Submit button clicked");
-        let fname = document.querySelector("#fname").value;
-        alert("fname:" +fname);
+        alert("Submit button clicked");      //alert when submit button is clicked
+        let fname = document.querySelector("#fname").value;  //take the value from html and store it
         let lname = document.querySelector("#lname").value;
-        //alert("lname:" +lname);
         let SeniorCitizen = document.querySelector("#SeniorCitizen").value;
         //alert("SeniorCitizen:" +SeniorCitizen);
-		window.location.href="cabType.html";
+		window.location.href="cabType.html";    call next html file
 	  }
 </script>
 </body>
