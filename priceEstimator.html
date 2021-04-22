@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>PRICE Estimator</title>
+	<style>
+div {
+  width: 450px;
+  height: 600px;
+  padding: 50px;
+  margin: auto;
+            margin-top: 5%;
+            border-radius: 10%;
+            background: lightsalmon;
+}
+			
+</style>
+</head>
+<body>
+<form>
+<div id="">
+    <center><h1 style="color:black;">Traveling Details</h1> </center>
+    <label>Enter kms :</label>
+    <input type="number" name="noofkm"  id="noofkm" placeholder="no of kms"  required>
+	<br/><br/>
+    <label>Select Cab Type:</label>
+    <select name="cabtype" id="cabtype" required>
+	<option disabled>--Select cab type--</option>
+	<option value= "MICRO">MICRO</option> 
+	<option value="MINI">MINI</option>
+    <option value="PRIME">PRIME</option> 
+    </select>
+    <br/><br/>
+    <label>GST :</label>
+    <input type="text" name="gst"  id="gst" value="7%" placeholder="gst"  readonly>
+    <br/><br/>
+    <label>Journey Date</label>
+    <input type="date" name="journeydate" id="journeydate" min="2021-04-23" max="2021-04-30" required ><br /><br />
+    <label>Journey Time</label>
+    <input type="time" name="journeytime" id="journeytime"required ><br /><br />
+	<label>Age</label>
+    <input type="number" name="age" id="age" required >
+    <br></br>
+    <center> <button type="button" onclick="calculate()">Calculate Fare</button></center>
+    <br/>
+    <p id="amount"> </p>
+    <p id="withgst"></p>
+    <p id="hour"></p>
+    <p id="hours"></p>
+    <p id="sc"></p>
+    <p id="sc1"></p>
+    <p id="sc2"></p>
+    <br/>
+    <center><button  type="button" onclick="bill()">Submit & Next</button> </center>
+    
+</div>
+</form>
+    <script src="calculation.js">  //call the js file from this link
+        
+    </script>
+
+</body>
+</html>
