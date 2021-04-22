@@ -17,7 +17,7 @@ div {
 </style>
 </head>
 <body>
-<form onsubmit="cabtype()">
+<form>
 <div id="">
 	<center><h1 style="color:black;">Cab Types</h1> </center>
 <center>
@@ -41,15 +41,15 @@ div {
 </tbody>
 	</center>
 	<br /> <br/>
-	<center> <a href="billamount.html" target="_blank"><button>Next</button></a> </center>
+	<center><button  type="button" onclick="cabtype()">Next</button> </center>
 </div>
 </form>
 	<script>
     function cabtype()
     {
         event.preventDefault();
-        alert("Next button clicked");
-        window.location.href="billamount.html"
+        alert("Next button clicked");            
+        window.location.href="billamount.html"   //call next html file 
     }
 
 
