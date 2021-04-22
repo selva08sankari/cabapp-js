@@ -19,7 +19,7 @@ div {
 </head>
 <body >
 <div id="">
-<form onsubmit="login()">
+<form>
 	<center><h1 style="color:black;">Login to cab booking</h1></center>
         <br/>
 	<center><img src="cab.jfif" width="300" height="200"></center><br/><br/>
@@ -30,28 +30,28 @@ div {
 	<label for="password">Password</label>
 	<input type="password" name="password" id="password" placeholder="Enter password" required><br/><br/><br />
 
-	 <a href="customerdetails.html" target="_blank"><center><button style="color:blue;">Login</button></center></a>
+	<center><button style="color:blue;" type="button" onclick="login()">Login</button></center>
 </form>
 </div>
 <script>
     function login()
     {
         event.preventDefault();
-        alert("login button clicked");
+        alert("login button clicked");//alert when the submit button is clicked
         let username = document.querySelector("#username").value;
-        //alert("Username:" +username);
+       
         let mobileNum = document.querySelector("#mobilenumber").value;
-        //alert("mobileNum:" +mobileNum);
+       
         let password = document.querySelector("#password").value;
-        //alert("password:" +password);
-    
+       
+        //mobile number, user name and password checking
         if(((username.length >3 ) &&(password.length==8)) && 
         ((mobileNum.length==10) && (mobileNum.charAt(0)>='6' && mobileNum.charAt(0)<='9'))){
             alert("Login Success");
         window.location.href="customerdetails.html";
         }
         else{
-            alert("Invalid Login Credentials");
+            alert("Invalid Login Credentials");   //alert when conditions are invalid
         }
     }
 </script>
