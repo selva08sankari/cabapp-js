@@ -1,7 +1,7 @@
 function bill()
         {
             event.preventDefault();
-            alert("submit button clicked");
+            alert("Your cab is booked");
             window.location.href="final.html";  //call the next page to display
         }
         function calculate()
@@ -21,20 +21,21 @@ function bill()
                 case"MINI" : billAmount=15*km; break;
                 default : billAmount=20*km; break;
             }
-            document.getElementById("amount").innerHTML="Bill Amount is:"+billAmount;
+            document.getElementById("amount").innerHTML="Bill Amount is : Rs."+billAmount;
             gst=(billAmount*7)/100 ;     //7% gst
             amountWithGst=billAmount+gst;
-            document.getElementById("withgst").innerHTML="Bill Amount after addition of gst :"+amountWithGst;   //gst amount displayed in HTML
+            document.getElementById("withgst").innerHTML="Bill Amount after addition of gst : Rs."+amountWithGst;   //gst amount displayed in HTML
             let hour=parseInt(journeyTimeStr.substr(0,2));
             if(hour>=17 && hour<=19)
             {
                 peakHourRate=amountWithGst+((amountWithGst*1.25)/100);             //if travellers travel in peak hours extra charges are applied
-                document.getElementById("hour").innerHTML="    ****YOUR TIME IS IN PEAK HOUR****    ";
-                document.getElementById("hours").innerHTML="Bill Amount after addition of peak Hour Rate:"+peakHourRate;
+                document.getElementById("hour").innerHTML="    ****YOUR JOURNEY TIME IS IN PEAK HOUR****    ";
+                document.getElementById("hours").innerHTML="Bill Amount after addition of peak Hour Rate : Rs."+peakHourRate;
             }
             else
             {
                 peakHourRate=amountWithGst;
+                alert("Your journey time is not in peak hour");
                //no extra charges for non peak hour travellers
             }
             let age=parseInt(ageStr);
@@ -42,11 +43,12 @@ function bill()
             {
                 let seniorCitizenRate=peakHourRate/2; //50% discount for senior Citizen
                 document.getElementById("sc").innerHTML="    ****YOU ARE A SENIOR CITIZEN****    " ;
-                document.getElementById("sc1").innerHTML="Your final amount is :"+seniorCitizenRate;
+                document.getElementById("sc1").innerHTML="Your final amount is : Rs."+seniorCitizenRate;
             }
             else
             {
-                document.getElementById("sc2").innerHTML="Your final amount is :"+peakHourRate;  //if not a senior no discount
+                alert("You are not a Senior Citizen");
+                document.getElementById("sc2").innerHTML="Your final amount is : Rs."+peakHourRate;  //if not a senior no discount
             }
         //document.querySelector("#journeydate").setAttribute("value",todayDateStr);
         }
