@@ -43,7 +43,7 @@ function bill()
             {
                 let seniorCitizenRate=peakHourRate/2; //50% discount for senior Citizen
                 document.getElementById("sc").innerHTML="    ****YOU ARE A SENIOR CITIZEN****    " ;
-                document.getElementById("sc1").innerHTML="Your final amount is : Rs."+seniorCitizenRate"/-";
+                document.getElementById("sc1").innerHTML="Your final amount is : Rs."+seniorCitizenRate+"/-";
             }
             else
             {
