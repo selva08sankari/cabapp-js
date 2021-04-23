@@ -18,7 +18,7 @@ div {
 </head>
 <body>
 
-<form  onsubmit="details()">
+<form>
 	<div id="">
 	<center> <h1 style="color : black;"> Customer Details</h1> </center>
 		
@@ -39,7 +39,7 @@ div {
 	<input type="radio" name="gender" id="gender" value="M" >Male
 	<input type="radio" name="gender" value="F" >Female 
 	<br /><br />
-		<center><a><button style="color:blue;">Submit & Next</button></a> </center><br/>
+		<center><button type="button"  onclick="details()"style="color:blue;">Submit & Next</button></center><br/>
 <b> <label>Instructions:</label> </b>
 <nav>
     <ol>
@@ -59,8 +59,6 @@ div {
         alert("Submit button clicked");      //alert when submit button is clicked
         let fname = document.querySelector("#fname").value;  //take the value from html and store it
         let lname = document.querySelector("#lname").value;
-        let SeniorCitizen = document.querySelector("#SeniorCitizen").value;
-        //alert("SeniorCitizen:" +SeniorCitizen);
 		window.location.href="cabType.html";   // call next html file
 	  }
 </script>
